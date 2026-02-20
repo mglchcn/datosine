@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Macroeconómico</title>
     <link rel="stylesheet" href="style.css">
-    
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
@@ -13,27 +12,48 @@
     <div class="dashboard-container">
         <header>
             <h1>Indicadores Macroeconómicos</h1>
-            <p>Sincronización en tiempo real desde Google Sheets</p>
+            <p>Mostrando los primeros 5 registros</p>
         </header>
         
+        <section class="kpi-section">
+            <div class="controles">
+                <label for="selector-periodo">Selecciona un periodo para ver el dato exacto:</label>
+                <select id="selector-periodo">
+                    <option value="">Cargando periodos...</option>
+                </select>
+            </div>
+
+            <div class="kpi-grid">
+                <div class="kpi-card kpi-ipc">
+                    <h3>Dato IPC</h3>
+                    <p id="valor-ipc">--</p>
+                </div>
+                <div class="kpi-card kpi-empleo">
+                    <h3>Dato Empleo</h3>
+                    <p id="valor-empleo">--</p>
+                </div>
+                <div class="kpi-card kpi-balanza">
+                    <h3>Dato Balanza</h3>
+                    <p id="valor-balanza">--</p>
+                </div>
+            </div>
+        </section>
+
         <main class="charts-grid">
             <div class="chart-card">
                 <h2>Evolución del IPC</h2>
                 <div id="grafico-ipc"></div>
             </div>
-            
             <div class="chart-card">
                 <h2>Niveles de Empleo</h2>
                 <div id="grafico-empleo"></div>
             </div>
-
             <div class="chart-card">
                 <h2>Balanza</h2>
                 <div id="grafico-balanza"></div>
             </div>
         </main>
     </div>
-
     <script src="app.js"></script>
 </body>
 </html>
