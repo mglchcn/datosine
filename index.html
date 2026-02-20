@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Macroeconómico</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Indicadores Macroeconómicos</h1>
+            <p>Sincronización en tiempo real desde Google Sheets</p>
+        </header>
+        
+        <main class="charts-grid">
+            <div class="chart-card">
+                <h2>Evolución del IPC</h2>
+                <div id="grafico-ipc"></div>
+            </div>
+            
+            <div class="chart-card">
+                <h2>Niveles de Empleo</h2>
+                <div id="grafico-empleo"></div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Balanza</h2>
+                <div id="grafico-balanza"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
